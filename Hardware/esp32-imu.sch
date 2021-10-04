@@ -1,0 +1,446 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "ESP32 + IMU"
+Date "2021-10-04"
+Rev "v0.1.0"
+Comp "Universitat de Barcelona"
+Comment1 "Repo: https://github.com/TheAlbertDev/pcb-esp32-imu"
+Comment2 "Social networks: @thealbertdev"
+Comment3 "E-mail: albertalvarez@ub.edu; hello@thealbert.dev"
+Comment4 "Author: Albert Álvarez-Carulla"
+$EndDescr
+$Comp
+L Device:R R3
+U 1 1 615B6811
+P 6650 2000
+F 0 "R3" H 6720 2046 50  0000 L CNN
+F 1 "2k2" H 6720 1955 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6580 2000 50  0001 C CNN
+F 3 "~" H 6650 2000 50  0001 C CNN
+	1    6650 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 615B6B79
+P 7125 2000
+F 0 "R5" H 7195 2046 50  0000 L CNN
+F 1 "2k2" H 7195 1955 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7055 2000 50  0001 C CNN
+F 3 "~" H 7125 2000 50  0001 C CNN
+	1    7125 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x15_Female ESP32-A1
+U 1 1 615B738C
+P 3425 3000
+F 0 "ESP32-A1" H 3317 3793 50  0000 C CNN
+F 1 "Conn_01x15_Female" H 3317 3794 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x15_P2.54mm_Vertical" H 3425 3000 50  0001 C CNN
+F 3 "~" H 3425 3000 50  0001 C CNN
+	1    3425 3000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x15_Female ESP32-B1
+U 1 1 615BAEA4
+P 4425 3000
+F 0 "ESP32-B1" H 4317 3793 50  0000 C CNN
+F 1 "Conn_01x15_Female" H 4317 3794 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x15_P2.54mm_Vertical" H 4425 3000 50  0001 C CNN
+F 3 "~" H 4425 3000 50  0001 C CNN
+	1    4425 3000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4625 2400 6650 2400
+Wire Wire Line
+	6650 2400 6650 2150
+Wire Wire Line
+	7125 2700 7125 2150
+Text Label 5525 2400 0    50   ~ 0
+SCL
+Text Label 5525 2700 0    50   ~ 0
+SDA
+$Comp
+L power:GND #PWR0101
+U 1 1 615BD4BD
+P 5100 3850
+F 0 "#PWR0101" H 5100 3600 50  0001 C CNN
+F 1 "GND" H 5105 3677 50  0000 C CNN
+F 2 "" H 5100 3850 50  0001 C CNN
+F 3 "" H 5100 3850 50  0001 C CNN
+	1    5100 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 615BDA2B
+P 3800 3850
+F 0 "#PWR0102" H 3800 3600 50  0001 C CNN
+F 1 "GND" H 3805 3677 50  0000 C CNN
+F 2 "" H 3800 3850 50  0001 C CNN
+F 3 "" H 3800 3850 50  0001 C CNN
+	1    3800 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3625 3600 3800 3600
+Wire Wire Line
+	3800 3600 3800 3850
+Wire Wire Line
+	4625 3600 5100 3600
+Wire Wire Line
+	5100 3600 5100 3850
+$Comp
+L power:+3V3 #PWR0103
+U 1 1 615BE87B
+P 4725 3700
+F 0 "#PWR0103" H 4725 3550 50  0001 C CNN
+F 1 "+3V3" V 4740 3828 50  0000 L CNN
+F 2 "" H 4725 3700 50  0001 C CNN
+F 3 "" H 4725 3700 50  0001 C CNN
+	1    4725 3700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4725 3700 4625 3700
+$Comp
+L power:+3V3 #PWR0104
+U 1 1 615BFD50
+P 6650 1725
+F 0 "#PWR0104" H 6650 1575 50  0001 C CNN
+F 1 "+3V3" H 6665 1898 50  0000 C CNN
+F 2 "" H 6650 1725 50  0001 C CNN
+F 3 "" H 6650 1725 50  0001 C CNN
+	1    6650 1725
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0105
+U 1 1 615C0559
+P 7125 1725
+F 0 "#PWR0105" H 7125 1575 50  0001 C CNN
+F 1 "+3V3" H 7140 1898 50  0000 C CNN
+F 2 "" H 7125 1725 50  0001 C CNN
+F 3 "" H 7125 1725 50  0001 C CNN
+	1    7125 1725
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7125 1725 7125 1850
+Wire Wire Line
+	6650 1725 6650 1850
+Wire Wire Line
+	4625 2700 7125 2700
+$Comp
+L Connector:Conn_01x10_Female MPU1
+U 1 1 615C123B
+P 8575 2600
+F 0 "MPU1" H 8603 2530 50  0000 L CNN
+F 1 "Conn_01x10_Female" H 8603 2485 50  0001 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical" H 8575 2600 50  0001 C CNN
+F 3 "~" H 8575 2600 50  0001 C CNN
+	1    8575 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8375 2400 6650 2400
+Connection ~ 6650 2400
+Wire Wire Line
+	8375 2500 7600 2500
+Wire Wire Line
+	7600 2500 7600 2700
+Wire Wire Line
+	7600 2700 7125 2700
+Connection ~ 7125 2700
+$Comp
+L power:+3V3 #PWR0106
+U 1 1 615C6419
+P 7850 1900
+F 0 "#PWR0106" H 7850 1750 50  0001 C CNN
+F 1 "+3V3" H 7865 2073 50  0000 C CNN
+F 2 "" H 7850 1900 50  0001 C CNN
+F 3 "" H 7850 1900 50  0001 C CNN
+	1    7850 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 2200 8250 1900
+Wire Wire Line
+	8250 1900 8025 1900
+$Comp
+L power:GND #PWR0107
+U 1 1 615C6CB5
+P 7925 2300
+F 0 "#PWR0107" H 7925 2050 50  0001 C CNN
+F 1 "GND" V 7930 2172 50  0000 R CNN
+F 2 "" H 7925 2300 50  0001 C CNN
+F 3 "" H 7925 2300 50  0001 C CNN
+	1    7925 2300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7925 2300 8025 2300
+Wire Wire Line
+	8375 2200 8250 2200
+$Comp
+L Device:C_Small C3
+U 1 1 615C8E26
+P 8025 2075
+F 0 "C3" H 8225 2100 50  0000 R CNN
+F 1 "100n" H 8300 2000 50  0000 R CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 8025 2075 50  0001 C CNN
+F 3 "~" H 8025 2075 50  0001 C CNN
+	1    8025 2075
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8025 1975 8025 1900
+Connection ~ 8025 1900
+Wire Wire Line
+	8025 1900 7850 1900
+Wire Wire Line
+	8025 2175 8025 2300
+Connection ~ 8025 2300
+Wire Wire Line
+	8025 2300 8375 2300
+Wire Wire Line
+	8375 2900 4625 2900
+Text Label 5525 2900 0    50   ~ 0
+INT
+NoConn ~ 8375 2600
+NoConn ~ 8375 2700
+NoConn ~ 8375 2800
+NoConn ~ 8375 3000
+NoConn ~ 8375 3100
+$Comp
+L Switch:SW_MEC_5E SW2
+U 1 1 615CBDDC
+P 7625 4550
+F 0 "SW2" V 7625 4798 50  0000 L CNN
+F 1 "SW_MEC_5E" H 7625 4844 50  0001 C CNN
+F 2 "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-10xx" H 7625 4850 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 7625 4850 50  0001 C CNN
+	1    7625 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 615CDE0F
+P 6875 3875
+F 0 "R4" H 6945 3921 50  0000 L CNN
+F 1 "10k" H 6945 3830 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6805 3875 50  0001 C CNN
+F 3 "~" H 6875 3875 50  0001 C CNN
+	1    6875 3875
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0108
+U 1 1 615CDE16
+P 6875 3625
+F 0 "#PWR0108" H 6875 3475 50  0001 C CNN
+F 1 "+3V3" H 6890 3798 50  0000 C CNN
+F 2 "" H 6875 3625 50  0001 C CNN
+F 3 "" H 6875 3625 50  0001 C CNN
+	1    6875 3625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6875 3625 6875 3725
+$Comp
+L Device:R R6
+U 1 1 615CEE52
+P 7200 4200
+F 0 "R6" V 6993 4200 50  0000 C CNN
+F 1 "1k" V 7084 4200 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7130 4200 50  0001 C CNN
+F 3 "~" H 7200 4200 50  0001 C CNN
+	1    7200 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7350 4200 7675 4200
+Wire Wire Line
+	7675 4200 7675 4300
+Wire Wire Line
+	7675 4300 7725 4300
+Wire Wire Line
+	7725 4300 7725 4350
+Wire Wire Line
+	7625 4300 7675 4300
+Connection ~ 7675 4300
+Wire Wire Line
+	7625 4300 7625 4350
+$Comp
+L Device:C_Small C2
+U 1 1 615D153B
+P 6875 4550
+F 0 "C2" H 7075 4575 50  0000 R CNN
+F 1 "100n" H 7150 4475 50  0000 R CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 6875 4550 50  0001 C CNN
+F 3 "~" H 6875 4550 50  0001 C CNN
+	1    6875 4550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6875 4650 6875 4875
+Wire Wire Line
+	6875 4025 6875 4200
+Wire Wire Line
+	7050 4200 6875 4200
+Connection ~ 6875 4200
+Wire Wire Line
+	6875 4200 6875 4450
+Wire Wire Line
+	6875 4875 7675 4875
+Wire Wire Line
+	7675 4875 7675 4800
+Wire Wire Line
+	7675 4800 7625 4800
+Wire Wire Line
+	7625 4800 7625 4750
+Connection ~ 6875 4875
+Wire Wire Line
+	6875 4875 6875 4975
+Wire Wire Line
+	7675 4800 7725 4800
+Wire Wire Line
+	7725 4800 7725 4750
+Connection ~ 7675 4800
+$Comp
+L power:GND #PWR0109
+U 1 1 615D48D7
+P 6875 4975
+F 0 "#PWR0109" H 6875 4725 50  0001 C CNN
+F 1 "GND" H 6880 4802 50  0000 C CNN
+F 2 "" H 6875 4975 50  0001 C CNN
+F 3 "" H 6875 4975 50  0001 C CNN
+	1    6875 4975
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_MEC_5E SW1
+U 1 1 615D8900
+P 6250 5400
+F 0 "SW1" V 6250 5648 50  0000 L CNN
+F 1 "SW_MEC_5E" H 6250 5694 50  0001 C CNN
+F 2 "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-10xx" H 6250 5700 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 6250 5700 50  0001 C CNN
+	1    6250 5400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 615D8906
+P 5500 4725
+F 0 "R1" H 5570 4771 50  0000 L CNN
+F 1 "10k" H 5570 4680 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5430 4725 50  0001 C CNN
+F 3 "~" H 5500 4725 50  0001 C CNN
+	1    5500 4725
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0110
+U 1 1 615D890C
+P 5500 4475
+F 0 "#PWR0110" H 5500 4325 50  0001 C CNN
+F 1 "+3V3" H 5515 4648 50  0000 C CNN
+F 2 "" H 5500 4475 50  0001 C CNN
+F 3 "" H 5500 4475 50  0001 C CNN
+	1    5500 4475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 4475 5500 4575
+$Comp
+L Device:R R2
+U 1 1 615D8913
+P 5825 5050
+F 0 "R2" V 5618 5050 50  0000 C CNN
+F 1 "1k" V 5709 5050 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5755 5050 50  0001 C CNN
+F 3 "~" H 5825 5050 50  0001 C CNN
+	1    5825 5050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5975 5050 6300 5050
+Wire Wire Line
+	6300 5050 6300 5150
+Wire Wire Line
+	6300 5150 6350 5150
+Wire Wire Line
+	6350 5150 6350 5200
+Wire Wire Line
+	6250 5150 6300 5150
+Connection ~ 6300 5150
+Wire Wire Line
+	6250 5150 6250 5200
+$Comp
+L Device:C_Small C1
+U 1 1 615D8920
+P 5500 5400
+F 0 "C1" H 5700 5425 50  0000 R CNN
+F 1 "100n" H 5775 5325 50  0000 R CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 5500 5400 50  0001 C CNN
+F 3 "~" H 5500 5400 50  0001 C CNN
+	1    5500 5400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 5500 5500 5725
+Wire Wire Line
+	5500 4875 5500 5050
+Wire Wire Line
+	5675 5050 5500 5050
+Connection ~ 5500 5050
+Wire Wire Line
+	5500 5050 5500 5300
+Wire Wire Line
+	5500 5725 6300 5725
+Wire Wire Line
+	6300 5725 6300 5650
+Wire Wire Line
+	6300 5650 6250 5650
+Wire Wire Line
+	6250 5650 6250 5600
+Connection ~ 5500 5725
+Wire Wire Line
+	5500 5725 5500 5825
+Wire Wire Line
+	6300 5650 6350 5650
+Wire Wire Line
+	6350 5650 6350 5600
+Connection ~ 6300 5650
+$Comp
+L power:GND #PWR0111
+U 1 1 615D8934
+P 5500 5825
+F 0 "#PWR0111" H 5500 5575 50  0001 C CNN
+F 1 "GND" H 5505 5652 50  0000 C CNN
+F 2 "" H 5500 5825 50  0001 C CNN
+F 3 "" H 5500 5825 50  0001 C CNN
+	1    5500 5825
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6875 4200 4225 4200
+Wire Wire Line
+	4225 4200 4225 3200
+Wire Wire Line
+	4225 3200 3625 3200
+Wire Wire Line
+	4100 5050 4100 3300
+Wire Wire Line
+	4100 3300 3625 3300
+Wire Wire Line
+	4100 5050 5500 5050
+$EndSCHEMATC
