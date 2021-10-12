@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this PCB, please cite it as below."
+authors:
+- family-names: "Álvarez-Carulla"
+  given-names: "Albert"
+  orcid: "https://orcid.org/0000-0001-5293-4487"
+  email: "hello@thealbert.dev"
+  website: "https://thealbert.dev/"
+title: "ESP32 + IMU PCB"
+version: 0.2.0
+date-released: 2021-10-12
+url: "https://github.com/TheAlbertDev/pcb-esp32-imu"
+preferred-citation:
+  type: misc
+  authors:
+  - family-names: "Álvarez-Carulla"
+    given-names: "Albert"
+    orcid: "https://orcid.org/0000-0001-5293-4487"
+    email: "hello@thealbert.dev"
+    website: "https://thealbert.dev/"
+  day: 12
+  month: 10
+  title: "ESP32 + IMU PCB"
+  year: 2021

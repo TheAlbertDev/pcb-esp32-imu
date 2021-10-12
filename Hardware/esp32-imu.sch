@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "ESP32 + IMU"
-Date "2021-10-04"
-Rev "v0.1.0"
+Date "2021-10-12"
+Rev "v0.2.0"
 Comp "Universitat de Barcelona"
 Comment1 "Repo: https://github.com/TheAlbertDev/pcb-esp32-imu"
 Comment2 "Social networks: @thealbertdev"
@@ -19,7 +19,7 @@ U 1 1 615B6811
 P 6650 2000
 F 0 "R3" H 6720 2046 50  0000 L CNN
 F 1 "2k2" H 6720 1955 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6580 2000 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6580 2000 50  0001 C CNN
 F 3 "~" H 6650 2000 50  0001 C CNN
 	1    6650 2000
 	1    0    0    -1  
@@ -30,7 +30,7 @@ U 1 1 615B6B79
 P 7125 2000
 F 0 "R5" H 7195 2046 50  0000 L CNN
 F 1 "2k2" H 7195 1955 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7055 2000 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7055 2000 50  0001 C CNN
 F 3 "~" H 7125 2000 50  0001 C CNN
 	1    7125 2000
 	1    0    0    -1  
@@ -195,7 +195,7 @@ U 1 1 615C8E26
 P 8025 2075
 F 0 "C3" H 8225 2100 50  0000 R CNN
 F 1 "100n" H 8300 2000 50  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 8025 2075 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 8025 2075 50  0001 C CNN
 F 3 "~" H 8025 2075 50  0001 C CNN
 	1    8025 2075
 	-1   0    0    -1  
@@ -236,7 +236,7 @@ U 1 1 615CDE0F
 P 6875 3875
 F 0 "R4" H 6945 3921 50  0000 L CNN
 F 1 "10k" H 6945 3830 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6805 3875 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6805 3875 50  0001 C CNN
 F 3 "~" H 6875 3875 50  0001 C CNN
 	1    6875 3875
 	1    0    0    -1  
@@ -260,7 +260,7 @@ U 1 1 615CEE52
 P 7200 4200
 F 0 "R6" V 6993 4200 50  0000 C CNN
 F 1 "1k" V 7084 4200 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7130 4200 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7130 4200 50  0001 C CNN
 F 3 "~" H 7200 4200 50  0001 C CNN
 	1    7200 4200
 	0    1    1    0   
@@ -284,7 +284,7 @@ U 1 1 615D153B
 P 6875 4550
 F 0 "C2" H 7075 4575 50  0000 R CNN
 F 1 "100n" H 7150 4475 50  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 6875 4550 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 6875 4550 50  0001 C CNN
 F 3 "~" H 6875 4550 50  0001 C CNN
 	1    6875 4550
 	-1   0    0    -1  
@@ -342,7 +342,7 @@ U 1 1 615D8906
 P 5500 4725
 F 0 "R1" H 5570 4771 50  0000 L CNN
 F 1 "10k" H 5570 4680 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5430 4725 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5430 4725 50  0001 C CNN
 F 3 "~" H 5500 4725 50  0001 C CNN
 	1    5500 4725
 	1    0    0    -1  
@@ -366,31 +366,20 @@ U 1 1 615D8913
 P 5825 5050
 F 0 "R2" V 5618 5050 50  0000 C CNN
 F 1 "1k" V 5709 5050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5755 5050 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5755 5050 50  0001 C CNN
 F 3 "~" H 5825 5050 50  0001 C CNN
 	1    5825 5050
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5975 5050 6300 5050
-Wire Wire Line
-	6300 5050 6300 5150
-Wire Wire Line
-	6300 5150 6350 5150
-Wire Wire Line
-	6350 5150 6350 5200
-Wire Wire Line
-	6250 5150 6300 5150
-Connection ~ 6300 5150
-Wire Wire Line
-	6250 5150 6250 5200
+	5975 5050 6350 5050
 $Comp
 L Device:C_Small C1
 U 1 1 615D8920
 P 5500 5400
 F 0 "C1" H 5700 5425 50  0000 R CNN
 F 1 "100n" H 5775 5325 50  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 5500 5400 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 5500 5400 50  0001 C CNN
 F 3 "~" H 5500 5400 50  0001 C CNN
 	1    5500 5400
 	-1   0    0    -1  
@@ -443,4 +432,7 @@ Wire Wire Line
 	4100 3300 3625 3300
 Wire Wire Line
 	4100 5050 5500 5050
+NoConn ~ 6250 5200
+Wire Wire Line
+	6350 5050 6350 5200
 $EndSCHEMATC
